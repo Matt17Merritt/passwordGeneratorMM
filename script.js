@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -11,6 +27,20 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Function that pulls random whole numbers for the corresponding lowercase letters from character chart.
 function getRandomLowerCase() {
@@ -35,3 +65,10 @@ function getRandomNumber() {
 // Test
 console.log(getRandomNumber());
 
+// Function that uses the symbol array to randomize what symbol gets picked.
+function getRandomSymbol() {
+  var symbols = '!@#$%^&*(){}[]=<>/,.';
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
+// Test
+console.log(getRandomSymbol());
