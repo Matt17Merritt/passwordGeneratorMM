@@ -1,4 +1,10 @@
-
+// Object containing all of the randomizer functions.
+const randomFunc = {
+  lower: getRandomLowerCase,
+  upper: getRandomUpperCase,
+  number: getRandomNumber,
+  symbol: getRandomSymbol
+};
 
 
 
@@ -48,8 +54,6 @@ function getRandomLowerCase() {
 }
 // Test
 console.log(getRandomLowerCase());
-
-//console.log(Math.floor(Math.random() * 26) + 97);
 
 // Function that pulls random whole numbers for the corresponding uppercase letters from character chart.
 function getRandomUpperCase() {
