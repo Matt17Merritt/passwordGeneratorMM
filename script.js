@@ -10,53 +10,47 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input. This is the generate password function.
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
-  
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener('click', function writePassword (event) {
-  let characterCount = prompt('How many characters would you like in your password? Enter a number from 8 to 128.');
-  console.log(characterCount);
-  let characterUseUpper = confirm('Would you like uppercase letters?');
-  console.log(characterUseUpper);
-  let characterUseLower = confirm('Would you like lowercase letters?');
-  console.log(characterUseLower);
-  let characterUseNum = confirm('Would you like numbers?');
-  console.log(characterUseNum);
-  let characterUseSym = confirm('Would you like symbols?');
-  console.log(characterUseSym);
-  
+}  
+  function generatePassword() {
+    let characterCount = parseInt(prompt('How many characters would you like in your password? Enter a number from 8 to 128.'));
+    //console.log(characterCount);
+    let characterUseUpper = confirm('Would you like uppercase letters?');
+    //console.log(characterUseUpper);
+    let characterUseLower = confirm('Would you like lowercase letters?');
+    //console.log(characterUseLower);
+    let characterUseNum = confirm('Would you like numbers?');
+    //console.log(characterUseNum);
+    let characterUseSym = confirm('Would you like symbols?');
+    //console.log(characterUseSym);
+    
     // while loop that checks if the user entered any of the char sets.
     while (characterUseUpper === false && characterUseLower === false && characterUseNum === false && characterUseSym === false) {
-    alert("Please select one of the following options.");
-    characterUseUpper = confirm('Would you like uppercase letters?');
-    characterUseLower = confirm('Would you like lowercase letters?');
-    characterUseNum = confirm('Would you like numbers?');
-    characterUseSym = confirm('Would you like symbols?');
+      alert("Please select one of the following options.");
+      characterUseUpper = confirm('Would you like uppercase letters?');
+      characterUseLower = confirm('Would you like lowercase letters?');
+      characterUseNum = confirm('Would you like numbers?');
+      characterUseSym = confirm('Would you like symbols?');
+  
+    }
 
-}});
-
-
-
-
-
-
-
-
+    //while loop that makes sure the password length entry is valid and with 8 & 128
+    while (characterCount < 8 || characterCount > 128 || typeof(characterCount) != "number" || characterCount === NaN || characterCount === null) {
+      alert("Please choose a number within the range of 8 and 128");
+      characterCount=parseInt(prompt("How many characters would you like in your password? Enter a number from 8 to 128."));
+    }
 
 
 
+  };
 
-
-
-
-
-
-
+// Add event listener to generate button
+generateBtn.addEventListener('click', writePassword);
+  
+  
 
 
 
