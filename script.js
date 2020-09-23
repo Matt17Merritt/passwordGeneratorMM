@@ -28,6 +28,7 @@ function writePassword() {
     //console.log(characterUseSym);
     
     // while loop that checks if the user entered any of the char sets.
+    
     while (characterUseUpper === false && characterUseLower === false && characterUseNum === false && characterUseSym === false) {
       alert("Please select one of the following options.");
       characterUseUpper = confirm('Would you like uppercase letters?');
@@ -38,6 +39,7 @@ function writePassword() {
     }
 
     //while loop that makes sure the password length entry is valid and within 8 & 128
+    
     while (characterCount < 8 || characterCount > 128 || typeof(characterCount) != "number" || characterCount === NaN || characterCount === null) {
       alert("Please choose a number within the range of 8 and 128");
       characterCount=parseInt(prompt("How many characters would you like in your password? Enter a number from 8 to 128."));
@@ -46,6 +48,7 @@ function writePassword() {
     // console.log(characterCount);
 
     //conditional that says if the character type is selected, the name of array is stored in a group array.
+    
     if (characterUseUpper == true) {
       caseArray.push(upperCaseChar);
     }
@@ -78,13 +81,22 @@ function writePassword() {
 
     selectedCharArray = caseArray[randomArrayNum];
 
-    console.log(caseArray.length);
-    console.log(randomArrayNum);
+    //console.log(caseArray.length);
+    //console.log(randomArrayNum);
     
+    // variable that stores random number based on length
     
+    randomCharNum = Math.floor(Math.random() * selectedCharArray.length);
     
+    //console.log("The array is the " + selectedCharArray);
+    //console.log("The index is " + randomCharNum);
     
+    randomChar = selectedCharArray[randomArrayNum];
     
+    //console.log(randomChar);
+    console.log("random char array num is " + randomArrayNum + " and random character num is " + randomCharNum);
+
+
     }
 
   }
