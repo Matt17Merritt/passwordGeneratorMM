@@ -1,4 +1,9 @@
-
+// created arrays for lowercase, uppercase, numbers, and special symbols + a var for callback when the password is needed
+let caseArray=[];
+let lowerCaseChar=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+let upperCaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+let numChar=["0","1","2","3","4","5","6","7","8","9"];
+let symbolChar=["!","@","#","$","%","^","&","*","(",")","{","}","|","[","]",";","'",":","<",">","?","/"];
 
 // Assigns button ID 'generate' to the variable 'generateBtn'.
 var generateBtn = document.querySelector("#generate");
