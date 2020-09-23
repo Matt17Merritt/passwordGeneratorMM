@@ -21,3 +21,9 @@ console.log(getRandomLowerCase());
 
 //console.log(Math.floor(Math.random() * 26) + 97);
 
+// Function that pulls random whole numbers for the corresponding upper case letters from character chart.
+function getRandomUpperCase() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+console.log(getRandomUpperCase());
