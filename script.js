@@ -69,6 +69,22 @@ function writePassword() {
       var selectedCharArray;
       var randomCharNum;
       var randomChar;
+    
+    // random number generated for group array
+
+    randomArrayNum = parseInt(Math.floor(Math.random() * caseArray.length));
+
+    // random number generated for character array
+
+    selectedCharArray = caseArray[randomArrayNum];
+
+    console.log(caseArray.length);
+    console.log(randomArrayNum);
+    
+    
+    
+    
+    
     }
 
   }
