@@ -8,14 +8,18 @@ let symbolChar=["!","@","#","$","%","^","&","*","(",")","{","}","|","[","]",";",
 // Assigns button ID 'generate' to the variable 'generateBtn'.
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input. This is the generate password function.
+// Write password to the #password input. 
 function writePassword() {
   var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
-}  
+
+  
   function generatePassword() {
+    
+    
+    
     let characterCount = parseInt(prompt('How many characters would you like in your password? Enter a number from 8 to 128.'));
     //console.log(characterCount);
     let characterUseUpper = confirm('Would you like uppercase letters?');
@@ -73,34 +77,39 @@ function writePassword() {
       var randomCharNum;
       var randomChar;
     
-    // random number generated for group array
+      // random number generated for group array
 
-    randomArrayNum = parseInt(Math.floor(Math.random() * caseArray.length));
+      randomArrayNum = parseInt(Math.floor(Math.random() * caseArray.length));
 
-    // random number generated for character array
+      // random number generated for character array
 
-    selectedCharArray = caseArray[randomArrayNum];
+      selectedCharArray = caseArray[randomArrayNum];
 
-    //console.log(caseArray.length);
-    //console.log(randomArrayNum);
-    
-    // variable that stores random number based on length
-    
-    randomCharNum = Math.floor(Math.random() * selectedCharArray.length);
-    
-    //console.log("The array is the " + selectedCharArray);
-    //console.log("The index is " + randomCharNum);
-    
-    randomChar = selectedCharArray[randomArrayNum];
-    
-    //console.log(randomChar);
-    console.log("random char array num is " + randomArrayNum + " and random character num is " + randomCharNum);
+      //console.log(caseArray.length);
+      //console.log(randomArrayNum);
+      
+      // variable that stores random number based on length
+      
+      randomCharNum = Math.floor(Math.random() * selectedCharArray.length);
+      
+      //console.log("The array is the " + selectedCharArray);
+      //console.log("The index is " + randomCharNum);
+      
+      randomChar = selectedCharArray[randomArrayNum];
+      
+      //console.log(randomChar);
+      //console.log("random char array num is " + randomArrayNum + " and random character num is " + randomCharNum);
 
-
+      // grab the pword 
+      var passwordString; 
+      passwordString+=randomChar;
+      
     }
+   
 
   }
-
+  return passwordText;
+}
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
   
