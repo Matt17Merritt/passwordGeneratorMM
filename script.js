@@ -6,33 +6,40 @@ const randomFunc = {
   symbol: getRandomSymbol
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Assignment Code
+// Assigns button ID 'generate' to the variable 'generateBtn'.
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Write password to the #password input. This is the generate password function.
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
+
+
+
+
+
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener ('click', writePassword()) {
+  alert('password stuff');
+}
 
 
 
