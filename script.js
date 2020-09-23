@@ -37,15 +37,31 @@ function writePassword() {
   
     }
 
-    //while loop that makes sure the password length entry is valid and with 8 & 128
+    //while loop that makes sure the password length entry is valid and within 8 & 128
     while (characterCount < 8 || characterCount > 128 || typeof(characterCount) != "number" || characterCount === NaN || characterCount === null) {
       alert("Please choose a number within the range of 8 and 128");
       characterCount=parseInt(prompt("How many characters would you like in your password? Enter a number from 8 to 128."));
     }
 
+    // console.log(characterCount);
 
+    if (characterUseUpper == true) {
+      caseArray.push(upperCaseChar);
+    }
 
-  };
+    if (characterUseLower == true) {
+      caseArray.push(lowerCaseChar);
+    }
+
+    if (characterUseNum == true) {
+      caseArray.push(numChar);
+    }
+
+    if (characterUseSym == true) {
+      caseArray.push(symbolChar);
+    }
+
+  }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
