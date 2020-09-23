@@ -45,6 +45,7 @@ function writePassword() {
 
     // console.log(characterCount);
 
+    //conditional that says if the character type is selected, the name of array is stored in a group array.
     if (characterUseUpper == true) {
       caseArray.push(upperCaseChar);
     }
@@ -59,6 +60,15 @@ function writePassword() {
 
     if (characterUseSym == true) {
       caseArray.push(symbolChar);
+    }
+
+    // loop that runs for password length
+
+    for (var i=0;i<characterCount;i++){
+      var randomArrayNum;
+      var selectedCharArray;
+      var randomCharNum;
+      var randomChar;
     }
 
   }
