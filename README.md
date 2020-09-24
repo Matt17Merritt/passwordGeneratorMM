@@ -7,10 +7,10 @@ Upon review of this project, the reader will find a functioning password generat
 ## Password-generator Webpage Link
 
 You can find the webpage below:
-
+https://matt17merritt.github.io/passwordGeneratorMM/
 
 ## Screenshot
-
+![passwordGeneratorMM](assets/screenshotPass.PNG)
 
 ## Credits
 
